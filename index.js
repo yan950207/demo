@@ -11,6 +11,8 @@ const RangePicker = DatePicker.RangePicker;
 
 function disabledDate(current) {
     const dateFormat = 'YYYY/MM/DD';
+    var d=new Date();
+    d.setDate(d.getDate()-1);
     return current && current.valueOf() < Date.now() || current && current.valueOf() > moment('2017/09/01', dateFormat);
 }
 
