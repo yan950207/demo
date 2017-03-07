@@ -10,10 +10,10 @@ const RangePicker = DatePicker.RangePicker;
 
 
 function disabledDate(current) {
-    const dateFormat = 'YYYY/MM/DD';
+    const dateFormat = 'YYYY/MM/DD HH:mm:ss';
     var d=new Date();
     d.setDate(d.getDate()-1);
-    return current && current.valueOf() < Date.now() || current && current.valueOf() > moment('2017/09/01', dateFormat);
+    return current && current.valueOf() < d || current && current.valueOf() > moment('2017/08/31 23:59:59', dateFormat);
 }
 
 function App() {
